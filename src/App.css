@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255,255,255, 0)
+
+}
+
+body{
+  font-family: "Roboto Condensed" sans-serif;
+}
+
+/************************** NAVBAR ************************************/
+.logo{
+  width: 3rem;
+}
+
+/*----------- MENU LINKS -----------*/
+nav a.nav-link {
+  letter-spacing: 0.0375px;
+  cursor: pointer;
+}
+
+nav ul li{
+  text-transform: uppercase;
+  
+}
+
+.navbar-nav > li > a {
+  margin-right: .75rem;
+  margin-left: .75rem;
+  color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark)
+}
+
+.navbar-brand{
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
+
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li> a.active:focus {
+  border-top: .1875rem solid var(--primary-orange)
+}
+
+.navbar-nav > li > a:hover {
+  border-top: .1875rem solid var(--primary-orange)
+}
