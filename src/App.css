@@ -52,6 +52,7 @@
   --primary-black: #000000;
   --primary-transparent-black: rgba(0,0,0,0.7);
   --primary-green: green; 
+  --primary-transparent: rgba(0,0,0,0);
 }
 
 body{
@@ -74,6 +75,15 @@ nav a.nav-link {
   cursor: pointer;
 }
 
+.navbar.bg-dark{
+  background:transparent !important;
+}
+
+.navbar.bg-dark.scrolled{
+  background-color: var(--primary-black) !important;
+  transition: 0.7s ease-in-out;
+}
+
 nav ul li{
   text-transform: uppercase;
   
@@ -83,7 +93,7 @@ nav ul li{
   margin-right: .75rem;
   margin-left: .75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark)
+  border-top: 0.1875rem solid var(--primary-transparent)
 }
 
 .navbar-brand{
@@ -91,6 +101,10 @@ nav ul li{
   padding: 0 !important;
   height: 6rem !important;
 
+}
+
+.navbar-toggler{
+  color: var(--primary-black) !important;
 }
 
 .navbar-nav > li > a.active, .navbar-nav > li> a.active:focus {
@@ -101,11 +115,21 @@ nav ul li{
   border-top: .1875rem solid var(--primary-orange)
 }
 
-@media(max-width: 768px){
+@media(max-width: 991px){
   .navbar-brand{
     width: 7rem
   }
+
+  .navbar.bg-dark{
+    background:var(--primary-dark) !important;
+  }
+  .navbar.bg-dark.scrolled{
+    background-color: var(--primary-dark) !important;
+    transition: none;
+  }
 }
+
+
 
 /************************** HEADER ************************************/
 
@@ -636,4 +660,50 @@ textarea.form-control{
   .contacts p{
     padding: 0 .7rem;
   }
+}
+
+/************************** FOOTER ************************************/
+.footer{
+  background: var(--primary-black);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover{
+  text-decoration: none;
+  color: var(--primary-purple);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer-title{
+  text-align: center;
+  padding:-0.3rem;
+  color: var(--primary-purple);
+}
+
+.footer-nav{
+  margin: 0;
+}
+
+.box{
+  align-content: center;
+  text-align: center;
+}
+
+.nav-box {
+  text-align: center;
+}
+
+.icon{
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
