@@ -38,6 +38,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
 
 :root{
   --primary-white: #fff;
@@ -69,6 +70,15 @@ nav{
   width: 5rem;
 }
 
+nav .line{
+  position: relative;
+  top: -0.7rem;
+  width: 0;
+  height: 0.15rem;
+  background: var(--primary-purple);
+  display: inline-block;
+}
+
 /*----------- MENU LINKS -----------*/
 nav a.nav-link {
   letter-spacing: 0.0375px;
@@ -82,6 +92,10 @@ nav a.nav-link {
 .navbar.bg-dark.scrolled{
   background-color: var(--primary-black) !important;
   transition: 0.7s ease-in-out;
+}
+
+.navbar{
+  
 }
 
 nav ul li{
@@ -103,16 +117,13 @@ nav ul li{
 
 }
 
-.navbar-toggler{
-  color: var(--primary-black) !important;
-}
-
 .navbar-nav > li > a.active, .navbar-nav > li> a.active:focus {
-  border-top: .1875rem solid var(--primary-orange)
+  border-top: .1875rem solid var(--primary-purple);
+  transition: 0.5s ease-in-out;
 }
 
 .navbar-nav > li > a:hover {
-  border-top: .1875rem solid var(--primary-orange)
+  border-top: .1875rem solid var(--primary-purple)
 }
 
 @media(max-width: 991px){
@@ -138,7 +149,7 @@ nav ul li{
   background: url(background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info{
@@ -177,12 +188,16 @@ nav ul li{
 
 
 /************* HEADER MAIN OFFER BUTTON ***************/
+.home-buttons{
+  margin:2rem;
+}
+
 .btn-main-offer{
   border: 1px solid var(--primary-purple);
   background-color: var(--primary-purple);
   text-transform: uppercase;
   border-radius: 0;
-  padding: .625rem .75rem .75rem .75rem;
+  padding: .75rem .75rem .75rem .75rem;
   color: var(--primary-white);
   margin: 2rem;
 }
@@ -209,6 +224,9 @@ nav ul li{
 }
 
 /************************** ABOUT ME ************************************/
+.about{
+  margin-top: 5rem;
+}
 
 .photo-wrap{
   display: flex;
@@ -242,7 +260,7 @@ nav ul li{
 }
 
 .services h1{
-  color: var(--primary-dark);
+  color: var(--primary-purple);
   text-transform: uppercase;
 }
 
@@ -296,8 +314,10 @@ nav ul li{
 
 /************************** EXPERIENCE ************************************/
 
+
 .experience{
   padding: 0.7rem;
+  margin-top: 3rem;
 }
 
 .experience-wrapper{
@@ -389,102 +409,156 @@ nav ul li{
 /************************** PORTFOLIO ************************************/
 
 .portfolio-wrapper{
-  background: var(--primary-light-grey);
-  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: var(--primary-dark);
+  justify-content: center;
+  text-align: left;
 }
 
-.portfolio-wrapper h1{
-  color: var(--primary-purple)
+.subheading{
+  font-family:  "Saira Extra Condensed", sans-serif !important;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  color: var(--primary-purple);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.portfolio-image {
-  width: 15rem;
-  height: 8rem;
-  border: 1px solid var(--primary-purple);
-  padding: 0 0.5rem;
+.work-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.portfolio-image-box{
+.right{
+  float: right !important;
+}
+
+.parent{
+  width: 48%;
+  margin-bottom: 4%;
+  height: 30rem;
+  overflow: hidden;
   position: relative;
-  margin: 1rem;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
 }
 
-/*----------------- OVERFLOW BOX ----------------------*/
-.overflow{
-  position: absolute;
+.child{
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5 ease;
+}
+
+.project-link{
   opacity: 0;
-  background: var(--primary-black);
-  width: 15rem;
-  height: 8rem;
-  top: 0;
-  border: 1px solid var(--primary-red);
+  font-size: 2rem;
+  color: #ffffff !important;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  
 }
 
-.portfolio-image-box:hover .overflow{
-  opacity: 60%;
-  transition: 0.3s ease-in-out;
+.parent:hover .child, .parent:focus .child{
+  -ms-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.portfolio-icon {
-  position: absolute;
-  opacity: 0;
-  margin-left: -8rem;
-  margin-top: 3.6rem;
-  color: var(--primary-purple);
-  font-size: 1.5rem;
+.parent:hover a, .parent:focus a{
+  opacity: 1;
+  text-decoration: none;
 }
 
-.portfolio-image-box:hover .portfolio-icon {
-  opacity: 70%;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
+
+/*----------------- DETAILS ----------------------*/
+
+
+.portfolio-details{
+  display: none;
+  margin: auto;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
-/*----------------- POP UP BOX ----------------------*/
-.portfolio-image-popupbox {
-  width: 45rem;
-  padding: 0 0.5rem;
+.portfolio-details a {
+  padding: 1rem;
 }
 
-.hyper-link{
-  cursor: pointer;
-  color: var(--primary-purple);
 
+.img-header{
+  margin-top: 2rem;
+  height: 30rem;
+  width: 100%;
+  background-size: cover;
 }
 
-.hyper-link:hover{
-  color: var(--primary-red);
+.portfolio-header{
+  display: flex;
+  align-items: center;
 }
 
-/*----------------- POP UP BOX MEDIA ----------------------*/
+.portfolio-company-logo{
+  width: 100%;
+  height: 100%;
+  max-width: 5rem;
+  padding-top: 1.5rem;
+}
 
-@media(max-width: 768px){
-  .portfolio-image-popupbox{
+.project-title{
+  font-family:  "Saira Extra Condensed", sans-serif !important;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 992px){
+  .parent{
     width: 100%;
+    height: 20rem;
   }
-
-}
-
-@media(max-height: 570px){
-  .popupbox-wrapper{
-    height: 100%
-  }
-
-  .portfolio-image-popupbox{
-    width: 40%
+  .img-header{
+    height: 3rem;
+    background-image: none !important;
   }
 }
-
-@media(max-height: 280px){
-  .popupbox-wrapper{
-    height: 90%
-  }
-
-  .portfolio-image-popupbox{
-    width: 30%
+  
+@media (min-width: 750px){
+  .project-title{
+    font-size: 3rem;
   }
 }
+
+
+
+
+
 
 /************************** TESTIMONIALS ************************************/
 .testimonials{
@@ -558,7 +632,7 @@ nav ul li{
 }
 
 .contacts h1{
-  color: var(--primary-red);
+  color: var(--primary-purple);
   padding: 1.3rem 0;
   text-transform: uppercase;
 }
@@ -579,7 +653,7 @@ nav ul li{
   border: 0;
   border-bottom: .125rem solid var(--primary-dark-grey);
   border-radius: 0;
-  color: var(--primary-red);
+  color: var(--primary-white);
   outline: 0 !important;
   box-shadow: none !important;
   margin-bottom: 1rem;
@@ -592,7 +666,7 @@ nav ul li{
 
 .contacts input:focus, .contacts textarea:focus{
   background: transparent;
-  color: var(--primary-red);
+  color: var(--primary-white);
   border-bottom:.125rem solid var(--primary-dark-grey);
 }
 
@@ -604,12 +678,12 @@ nav ul li{
   margin: 1rem 0 0 0;
   width: 100%;
   background: none;
-  border: 1px solid var(--primary-red);
+  border: 1px solid var(--primary-purple);
 }
 
 .contact-btn:hover{
-  border: 1px solid var(--primary-red);
-  background-color: var(--primary-red)
+  border: 1px solid var(--primary-purple);
+  background-color: var(--primary-purple)
 }
 
 .line{
@@ -617,7 +691,7 @@ nav ul li{
   top: -0.7rem;
   width: 0;
   height: 0.15rem;
-  background: var(--primary-red);
+  background: var(--primary-purple);
   display: inline-block;
 }
 
@@ -694,16 +768,16 @@ textarea.form-control{
   margin: 0;
 }
 
-.box{
+.footer .box{
   align-content: center;
   text-align: center;
 }
 
-.nav-box {
+.footer .nav-box {
   text-align: center;
 }
 
-.icon{
+.footer .icon{
   margin-right: 1rem;
   margin-left: 1rem;
 }

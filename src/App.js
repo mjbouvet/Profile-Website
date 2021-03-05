@@ -10,6 +10,7 @@ import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import PortfolioDetails from "./components/PortfolioDetails"
 
 function App() {
   return (
@@ -35,9 +36,9 @@ function App() {
       <Header/>
       <AboutMe/> 
       <Services/>
-      <Experience/>
       <Portfolio/>
-      <Testimonials/>
+      <PortfolioDetails/>
+      <Experience/>    
       <Contacts/>
       <Footer/>
     </>

@@ -1,19 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faDesktop, faFileCode } from '@fortawesome/free-solid-svg-icons';
+import { faDesktop, faFileCode, faAtom, faKeyboard} from '@fortawesome/free-solid-svg-icons';
 
 const Services = () => {
     return (
     <div id="services" class="services">
-        <h1 class="py-5">My Services</h1>
+        <h1 class="py-5">What I'm Currently Working On</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="box">
-                        <div class="circle"><FontAwesomeIcon className="icon" icon={faDesktop} size="2x"/></div>
-                        <h3>Web Design</h3>
-                        <p>I approach each project individually and always focus on the result.</p>
+                        <div class="circle"><FontAwesomeIcon className="icon" icon={faAtom} size="2x"/></div>
+                        <h3>Machine Learning</h3>
+                        <p>The topic of machine learning is amazing to me and something I've wanted to study since starting CS. I am currently taking a course on it, and have plans for some projects.</p>
                     </div>
                 </div>
                 {/* - */}
@@ -21,23 +20,23 @@ const Services = () => {
                     <div class="box">
                         <div class="circle"><FontAwesomeIcon className="icon" icon={faFileCode} size="2x"/></div>
                         <h3>Web Development</h3>
-                        <p>Your website will be built with a new proven technology</p>
+                        <p>Developing websites is both fun, and an important skill to have. Having finished this website, I am looking forward to my next project, and learning more about the field.</p>
                     </div>
                 </div>
                 {/* - */}
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="box">
-                        <div class="circle"><FontAwesomeIcon className="icon" icon={faFacebookF} size="2x"/></div>
-                        <h3>Facebook Ads SMM</h3>
-                        <p> Your potential clients will see your services or product on Facebook.</p>
+                        <div class="circle"><FontAwesomeIcon className="icon" icon={faKeyboard} size="2x"/></div>
+                        <h3>JavaScript</h3>
+                        <p>I have selected JavaScript as the next language I would like to learn. It will be helpful to know for some of the projects I want to work on, and will also help my web development.</p>
                     </div>
                 </div>
                 {/* - */}
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="box">
-                    <div class="circle"><FontAwesomeIcon className="icon" icon={faGoogle} size="2x"/></div>
-                        <h3>Google Ads</h3>
-                        <p>Your service or product will appear at the top of the Google search</p>
+                    <div class="circle"><FontAwesomeIcon className="icon" icon={faDesktop} size="2x"/></div>
+                        <h3>Sorting Algorithms</h3>
+                        <p>The current main side project I am working on is creating a sorting algorithm visualizer in order to reinforce my understanding of the different sorting methodologies.</p>
                     </div>
                 </div>
             </div>
