@@ -11,10 +11,7 @@ const Footer = () => {
                     <div className="col-lg-4 col-md-6 col-sm-6">
                         <h1 className="footer-title">INFO</h1>
                         <div className="d-flex justify-content-center">
-                            <p>302 N Washington Ave, Unit 10 • Bloomington, IN 47408</p>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <a href="tel:502-889-5731">+1(502)889-5731</a>
+                            <p>Denver, CO</p>
                         </div>
                         <div className="d-flex justify-content-center">
                             <a href="mailto: mjbouvet@iu.edu">mjbouvet@iu.edu</a>

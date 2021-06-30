@@ -6,8 +6,6 @@ import originalrogue from "../images/originalrogue.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
 //REACT POPUP BOX //
-import { PopupboxManager, PopupboxContainer } from "react-popupbox";
-import "react-popupbox/dist/react-popupbox.css";
 
 import { Link } from "react-scroll"
 
@@ -36,6 +34,7 @@ const Portfolio = () => {
     return (
         <div id="portfolio" className="portfolio-wrapper">
             <span className="subheading ">PROJECTS</span>
+            <span className = "subheading2">Please Click a Thumbnail to Learn More About the Project</span>
             <div className="work-grid">
                 <div className="parent">
                     <div className="child" style={{backgroundImage: `url(${houston})`}} >
