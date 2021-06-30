@@ -69,8 +69,8 @@ const Experience = () => {
                         <h3>2021-2022</h3>
                         <p>
                             <ul>
-                                <li><b>Spring</b> - Currently studying machine learning (Python3), object-oriented software methods(Java), distributed systems (Python3), and complex variables with applications. Teaching myself web development and working on personal projects in my free time</li><br />
-                                <li><b>Summer</b> - TBD</li><br />
+                                <li><b>Spring</b> - Studied machine learning (Python3), object-oriented software methods(Java), distributed systems (Python3), and complex variables with applications. Taught myself web development and working on personal projects in my free time</li><br />
+                                <li><b>Summer</b> - Graduated from IU with Distinction. Started as a Open Technology Consultant at Credera </li><br />
                                 <li><b>Fall</b> - TBD </li>
                             </ul>
                         </p>
